@@ -15,7 +15,7 @@ from pptx import Presentation
 from pptx.util import Inches
 import os
 
-#list1 = ['output1.jpg','output2.jpg','output3.jpg','output4.jpg','output5.jpg']
+
 
 
 
@@ -44,32 +44,16 @@ title_shape.text = 'Sample Title 1'
 tf = body_shape.text_frame
 tf.text = 'Sample Subtitle 1'
 
-#subtitle2 = slide2.placeholders[1]
-#subtitle2.text= "Sample Subtitle 1"
-
-#bullet_point_box = slide2.shapes
-#bullet_points_lvl1 = bullet_point_box.placeholders[0]
-#bullet_points_lvl1.text = "Sample Subtitle 1"
-#bullet_points_lvl12 = bullet_points_lvl1.text_frame.add_paragraph()
-#bullet_points_lvl12.text = "to"
-#bullet_points_lvl12.level = 1
-
-
-
 img1 = "output1.jpg"
 
 from_left = Inches(1)
 from_right = Inches(3)
 from_top = Inches(2.6)
-
 add_picture = slide2.shapes.add_picture(img1,from_left,from_top,from_right)
-
 
 
 #Slide for Picture2
 slide3 = pr1.slides.add_slide(pr1.slide_layouts[1])
-#title3=slide3.shapes.title
-#title3.text="Sample Title 2"
 
 shapes = slide3.shapes
 body_shape = shapes.placeholders[1]
@@ -79,14 +63,12 @@ title_shape.text = 'Sample Title 2'
 
 tf = body_shape.text_frame
 tf.text = 'Sample Subtitle 2'
-
 img2 = "output2.jpg"
-
 from_left = Inches(1)
 from_right = Inches(3)
 from_top = Inches(2.6)
-
 add_picture = slide3.shapes.add_picture(img2,from_left,from_top,from_right)
+
 
 #Slide for Picture3
 slide4 = pr1.slides.add_slide(pr1.slide_layouts[1])
@@ -160,25 +142,3 @@ pr1.save("project_assignment.pptx")
 #os.startfile("assignment2.pptx")
 
 
-
-
-
-
-
-
-"""lyt=prs.slide_layouts[0] # choosing a slide layout
-slide=prs.slides.add_slide(lyt) # adding a slide
-title=slide.shapes.title # assigning a title
-subtitle=slide.placeholders[1] # placeholder for subtitle
-title.text="Sample Title 1" # title
-
-
-#image = slide.placeholders[1].insert_picture("output1.jpg")
-subtitle.text="Sample Subtitle 1" # subtitle
-
-
-os.chdir(r"C:\\Users\\Mangesh\\Desktop\\Assigment_")
-picture = placeholder.insert_picture('output1.jpg')
-
-prs.save("Assignment.pptx") # saving file
-os.startfile("Assignment.pptx")"""
